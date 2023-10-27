@@ -1,10 +1,11 @@
 import bg_img from "../assets/bg_img.jpg"
 import img_1 from "../assets/img_1.jpg"
+import Footer from "../components/Footer"
 
 export default function IndexPage() {
   return (
     <>
-      <section className="bg-maincolor">
+      <section className="bg-maincolor-100">
         <div className="relative h-1/2">
           <img src={bg_img} className="w-full h-full object-cover object-center" alt="Background" />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center backdrop-blur-sm p-2 md:p-5">
@@ -18,14 +19,14 @@ export default function IndexPage() {
         </div>
       </section>
 
-      <section className="w-full lg:max-w-1/2 lg:flex p-20 mx-auto bg-maincolor justify-center">
+      <section className="w-full lg:max-w-1/2 lg:flex p-20 mx-auto bg-maincolor-100 justify-center">
         <div
           className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
           style={{ backgroundImage: "url(" + img_1 + ")" }}
           title="Image 1"
         ></div>
 
-        <div className="border-r border-b border-l border-[#40396f] lg:border-l-0 lg:border-t lg:border-[#40396f] bg-[#2a2649] rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+        <div className="border-r border-b border-l border-maincolor-300 lg:border-l-0 lg:border-t lg:border-maincolor-300 bg-maincolor-200 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
           <div className="mb-8">
             <div className="text-white font-bold text-xl mb-2">
               What is the porpose of this project?
@@ -54,6 +55,7 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   )
 }

@@ -5,7 +5,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'maincolor': '#1c1a30',
+        'maincolor': {
+          100: '#1c1a30',
+          200: '#2a2649',
+          300: '#40396f',
+        },
       },
     },
   },
